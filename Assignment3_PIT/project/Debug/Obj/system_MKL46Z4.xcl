@@ -1,14 +1,14 @@
-"D:\ARM\Assignment3\MKL46Z\system_MKL46Z4.c"
+"D:\ARM\TEMINAL\Assignment3_PIT\MKL46Z\system_MKL46Z4.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -MD
 -MF
-D:\ARM\Assignment3\project\Debug\Obj\system_MKL46Z4.pbi.dep
+D:\ARM\TEMINAL\Assignment3_PIT\project\Debug\Obj\system_MKL46Z4.pbi.dep
 -o
 system_MKL46Z4.pbi
 -I
-D:\ARM\Assignment3\MKL46Z
+D:\ARM\TEMINAL\Assignment3_PIT\MKL46Z
 -I
 D:\ARM\Assignment3\MKL46Z
 -I

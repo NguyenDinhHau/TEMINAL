@@ -5,6 +5,8 @@
 #define GREEN_LED_OFF  GPIOD->PSOR |= (1 << 5)
 #define RED_LED_ON     GPIOE->PCOR |= (1 << 29) /* define led red on*/
 #define RED_LED_OFF    GPIOE->PSOR |= (1 << 29)
+#define RED_LED_TOG    GPIOE->PTOR |= (1 << 29)
+#define GREEN_LED_TOG  GPIOD->PTOR |= (1 << 5)
 
 #define PERIOD 10000000
 

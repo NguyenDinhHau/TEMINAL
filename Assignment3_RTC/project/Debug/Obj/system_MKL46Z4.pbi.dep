@@ -1,16 +1,17 @@
-system_MKL46Z4.pbi: D:\ARM\Assignment3_RTC\MKL46Z\system_MKL46Z4.c \
+system_MKL46Z4.pbi: \
+  D:\ARM\TEMINAL\Assignment3_RTC\MKL46Z\system_MKL46Z4.c \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdint.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\ycheck.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\yvals.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\DLib_Defaults.h \
   C:\\Program\ Files\ (x86)\\IAR\ Systems\\Embedded\ Workbench\ 8.4\\arm\\inc\\c\\DLib_Config_Normal.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\DLib_Product.h \
-  D:\ARM\Assignment3_RTC\MKL46Z/fsl_device_registers.h \
-  D:\ARM\Assignment3_RTC\MKL46Z/MKL46Z4.h \
+  D:\ARM\TEMINAL\Assignment3_RTC\MKL46Z/fsl_device_registers.h \
+  D:\ARM\TEMINAL\Assignment3_RTC\MKL46Z/MKL46Z4.h \
   D:\ARM\Assignment3\CMSIS\Include\core_cm0plus.h \
   D:\ARM\Assignment3\CMSIS\Include/core_cmInstr.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\cmsis_iar.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c/iccarm_builtin.h \
   D:\ARM\Assignment3\CMSIS\Include/core_cmFunc.h \
-  D:\ARM\Assignment3_RTC\MKL46Z/system_MKL46Z4.h \
-  D:\ARM\Assignment3_RTC\MKL46Z/MKL46Z4_features.h
+  D:\ARM\TEMINAL\Assignment3_RTC\MKL46Z/system_MKL46Z4.h \
+  D:\ARM\TEMINAL\Assignment3_RTC\MKL46Z/MKL46Z4_features.h

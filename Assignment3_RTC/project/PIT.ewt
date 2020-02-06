@@ -2374,16 +2374,19 @@
     <group>
         <name>source</name>
         <file>
-            <name>$PROJ_DIR$\..\source\head.h</name>
+            <name>$PROJ_DIR$\..\source\maiin.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\source\maiin.c</name>
+            <name>$PROJ_DIR$\..\source\RTC.c</name>
         </file>
     </group>
     <group>
         <name>startup</name>
         <file>
             <name>$PROJ_DIR$\..\MKL46Z\fsl_device_registers.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\head.h</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\MKL46Z\MKL46Z4.h</name>

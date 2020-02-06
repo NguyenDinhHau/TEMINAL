@@ -35,7 +35,7 @@ void PIT_Init(void)
   FPTE->PDDR |= (1<<29);
   FPTD->PDDR |= (1<<5);
   /* turn on green led and red led */
-  GREEN_LED_ON;
+  GREEN_LED_OFF;
   RED_LED_ON;
   /* configuring for PIT */
   PIT->CHANNEL[0].TFLG     |= PIT_TFLG_TIF(1); 
@@ -54,27 +54,41 @@ void PIT_IRQHandler (void)
   Set_GreenLed();
   Set_RedLed();
 }
+//static void Set_GreenLed()
+//{
+//  if(time_greenLed == led1_off)
+//  {
+//    GREEN_LED_OFF;
+//  }
+//  else if(time_greenLed == (led1_off + led1_on))
+//  {
+//    GREEN_LED_ON;
+//    time_greenLed = 0;
+//  }
+//}
+//static void Set_RedLed()
+//{
+//  if(time_redLed == led2_off)
+//  {
+//    RED_LED_OFF;
+//  }
+//  else if(time_redLed == (led2_off + led2_on))
+//  {
+//    RED_LED_ON;
+//    time_redLed = 0;
+//  }
+//}
 static void Set_GreenLed()
 {
-  if(time_greenLed == led1_off)
+  if(time_greenLed % led1_off==0)
   {
-    GREEN_LED_OFF;
-  }
-  else if(time_greenLed == (led1_off + led1_on))
-  {
-    GREEN_LED_ON;
-    time_greenLed = 0;
+    GREEN_LED_TOG;
   }
 }
 static void Set_RedLed()
 {
-  if(time_redLed == led2_off)
+  if(time_redLed % led2_off==0)
   {
-    RED_LED_OFF;
-  }
-  else if(time_redLed == (led2_off + led2_on))
-  {
-    RED_LED_ON;
-    time_redLed = 0;
+    RED_LED_TOG;
   }
 }

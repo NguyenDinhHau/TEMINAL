@@ -1,14 +1,14 @@
-"D:\ARM\Assignment3_RTC\source\maiin.c"
+"D:\ARM\TEMINAL\Assignment3_RTC\source\maiin.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -MD
 -MF
-D:\ARM\Assignment3_RTC\project\Debug\Obj\maiin.pbi.dep
+D:\ARM\TEMINAL\Assignment3_RTC\project\Debug\Obj\maiin.pbi.dep
 -o
 maiin.pbi
 -I
-D:\ARM\Assignment3_RTC\source
+D:\ARM\TEMINAL\Assignment3_RTC\source
 -I
 D:\ARM\Assignment3\MKL46Z
 -I

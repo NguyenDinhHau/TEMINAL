@@ -1,4 +1,4 @@
-maiin.pbi: D:\ARM\Assignment3\source\head.h \
+maiin.pbi: D:\ARM\TEMINAL\Assignment3_PIT\source\head.h \
   D:\ARM\Assignment3\MKL46Z\system_MKL46Z4.h \
   D:\ARM\Assignment3\CMSIS\Include\core_cmFunc.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\iccarm_builtin.h \
@@ -10,4 +10,5 @@ maiin.pbi: D:\ARM\Assignment3\source\head.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\ycheck.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdint.h \
   D:\ARM\Assignment3\CMSIS\Include\core_cm0plus.h \
-  D:\ARM\Assignment3\MKL46Z\MKL46Z4.h D:\ARM\Assignment3\source\maiin.c
+  D:\ARM\Assignment3\MKL46Z\MKL46Z4.h \
+  D:\ARM\TEMINAL\Assignment3_PIT\source\maiin.c

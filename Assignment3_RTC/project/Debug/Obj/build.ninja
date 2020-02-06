@@ -21,8 +21,9 @@ rule browsedata
 
 #Build steps
 build maiin.pbi : index maiin.xcl
+build RTC.pbi : index RTC.xcl
 build system_MKL46Z4.pbi : index system_MKL46Z4.xcl
-build PIT.pbd : link maiin.pbi system_MKL46Z4.pbi
+build PIT.pbd : link maiin.pbi RTC.pbi system_MKL46Z4.pbi
 build PIT.pbw : browsedata PIT.pbd
 
 

@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "D:\ARM\Assignment3\project\settings\PIT.Debug.general.xcl" --backend -f "D:\ARM\Assignment3\project\settings\PIT.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "D:\ARM\TEMINAL\Assignment3_PIT\project\settings\PIT.Debug.general.xcl" --backend -f "D:\ARM\TEMINAL\Assignment3_PIT\project\settings\PIT.Debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "D:\ARM\Assignment3\project\settings\PIT.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\ARM\Assignment3\project\settings\PIT.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "D:\ARM\TEMINAL\Assignment3_PIT\project\settings\PIT.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\ARM\TEMINAL\Assignment3_PIT\project\settings\PIT.Debug.driver.xcl" 
 }
