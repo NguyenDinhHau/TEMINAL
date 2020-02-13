@@ -68,7 +68,7 @@
         DATA
 
 __vector_table
-        DCD     sfe(CSTACK)  /* dai chi first stack*/
+        DCD     sfe(CSTACK)
         DCD     Reset_Handler
 
         DCD     NMI_Handler                                   ;NMI Handler
