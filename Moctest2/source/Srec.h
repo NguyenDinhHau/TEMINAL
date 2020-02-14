@@ -4,7 +4,7 @@
 typedef struct {
     uint32_t add;
     uint8_t data[50];
-    uint8_t data_lengh;
+    uint8_t dataLengh;
 }addData_str_t;
 
 #define START 1
