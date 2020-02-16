@@ -45,14 +45,10 @@ void UART0_SendChar(char data)
 }
 void UART0_SendString(char *ptr_str)
 {
-  uint32_t i = 0;
-  for(i = 0; i< strlen(ptr_str); i++)
-  {
-    while(i != 0)
+    while(*ptr_str != 0)
     {
-        UART0_SendChar(ptr_str[i]);
+        UART0_SendChar(*ptr_str ++);
     }
-  }
 }
 
 uint8_t UART0_GetChar(void)

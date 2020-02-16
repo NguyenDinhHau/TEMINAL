@@ -42,71 +42,71 @@ uint8_t Srec_Parse(uint8_t *data, addData_str_t *copyData)
     uint8_t index = 0;
     uint8_t index_data = 0;
     uint8_t temp = 0;
-    
+
     if(data[0] == 'S')
     {
-        type = ConvertToHex(data[1]);
+         type = ConvertToHex(data[1]);
     }
     else
     {
-        status = ERROR_FIRST_CHARACTER;
+         status = ERROR_FIRST_CHARACTER;
     }
-    switch (type)
-    {
-        case 0:
-            addlength   = 2u;
-            status      = START;
-            break;
-        case 1:
-        case 2:
-        case 3:
-            status      = START_DATA;
-            addlength   = (type + 1u)*2;
-            break;
-        case 4:
-            break;
-        case 5:
-        case 6:
-            addlength   = (type - 3u)*2;
-            status      = DATA_LINE_COUNT;
-            break;
-        case 7:
-        case 8:
-        case 9:
-            status      = END_DATA;
-            addlength   = (11u - type)*2;
-            break;
+      switch (type)
+      {
+          case 0:
+              addlength   = 2u;
+              status      = START;
+              break;
+          case 1:
+          case 2:
+          case 3:
+              status      = START_DATA;
+              addlength   = (type + 1u)*2;
+              break;
+          case 4:
+              break;
+          case 5:
+          case 6:
+              addlength   = (type - 3u)*2;
+              status      = DATA_LINE_COUNT;
+              break;
+          case 7:
+          case 8:
+          case 9:
+              status      = END_DATA;
+              addlength   = (11u - type)*2;
+              break;
+      }
+      checkSum = 0;
+      index_data = 0;
+      copyData->add = 0;
+      copyData->dataLengh = 0;
+      byteCount   = (ConvertToByte(&data[2]));
+      checkSum    += byteCount;
+      copyData->dataLengh = byteCount - (addlength/2) - 1u;
+      for(index = 4; index <= strlen((char *)data)-4; index+=2)
+      {
+       if(index < (addlength + 4))
+       {
+           copyData->add <<=8u;
+           temp = ConvertToByte(&data[index]);
+           copyData->add |= temp;
+           checkSum += temp;
+       }
+       else if(index >= (addlength + 4))
+       {
+           temp = ConvertToByte(&data[index]);
+           copyData->data[index_data] = temp;
+           checkSum    += temp;
+           index_data ++;
+       }
+      }
+      checkSum += ConvertToByte(&data[strlen((char *)data)-3]);
 
-    }
-    byteCount   = (ConvertToByte(&data[2]));
-    checkSum    += byteCount;
-    copyData->dataLengh = byteCount - (addlength/2) - 1u;
-    index_data = 0;
-    copyData->add = 0;
-
-    for(index = 4; index <= strlen((char *)data)-4; index+=2)
-    {
-     if(index < (addlength + 4))
-     {
-         copyData->add <<=8u;
-         temp = ConvertToByte(&data[index]);
-         copyData->add |= temp;
-         checkSum += temp;
-     }
-     else if(index >= (addlength + 4))
-     {
-         temp = ConvertToByte(&data[index]);
-         copyData->data[index_data] = temp;
-         checkSum    += temp;
-         index_data ++;
-     }
-    }
-    checkSum += ConvertToByte(&data[strlen((char *)data)-3]);
-
-    if(0xFF != (uint8_t)checkSum)
-    {
-        status = ERROR_CHECKSUM;
-    }
+      if(0xFF != (uint8_t)checkSum)
+      {
+          status = ERROR_CHECKSUM;
+      }
 
     return status;
 }

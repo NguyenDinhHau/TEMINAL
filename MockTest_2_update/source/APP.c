@@ -15,10 +15,10 @@ static uint8_t g_isCheck = 1;
 
 void App(void)
 {
-  SCB->VTOR = APP_ISP_ADDRESS;  /*Hold vector table offset*/
- /*(volatile int *)APP_HANDLE_ADDRESS;  get first stack address*/
-  g_func_reset = (ptr_funtion)*(volatile int *)APP_HANDLE_ADDRESS; /*get adddress of reset handle of app*/
-  g_func_reset();  /*call function reset handle */
+    SCB->VTOR = APP_ISP_ADDRESS;  /*Hold vector table offset*/
+   /*(volatile int *)APP_HANDLE_ADDRESS;  get first stack address*/
+    g_func_reset = (ptr_funtion)*(volatile int *)APP_HANDLE_ADDRESS; /*get adddress of reset handle of app*/
+    g_func_reset();  /*call function reset handle */
 }
 void Boot(void)
 {
@@ -44,6 +44,7 @@ void Boot(void)
     {
      Queue_PopData(&buff);
      status = Srec_Parse(&buff[0],&addData[0]);
+     //
      if(START_DATA  == status)
      {
          for(index = 0; index < addData->dataLengh; index = index+4)
@@ -56,11 +57,6 @@ void Boot(void)
         if(END_DATA == status)
         {
           UART0_SendString("Done! Press reset button to run app \r\n");
-          g_isCheck = 0;
-        }
-        if(ERROR_DATA_TYPE == status)
-        {
-          UART0_SendString("ERROR TYPE! hold your Button and Press reset button to Boot Again \r\n");
           g_isCheck = 0;
         }
         if(ERROR_FIRST_CHARACTER == status)
