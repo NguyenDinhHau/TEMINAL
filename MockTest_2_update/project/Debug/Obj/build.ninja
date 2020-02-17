@@ -22,14 +22,15 @@ rule browsedata
 #Build steps
 build APP.pbi : index APP.xcl
 build Flash.pbi : index Flash.xcl
+build gpio.pbi : index gpio.xcl
 build main.pbi : index main.xcl
 build QUEUE.pbi : index QUEUE.xcl
 build Srec.pbi : index Srec.xcl
 build UART.pbi : index UART.xcl
 build system_MKL46Z4.pbi : index system_MKL46Z4.xcl
-build project4_part0.pbi : link APP.pbi Flash.pbi main.pbi
-build project4_part1.pbi : link QUEUE.pbi Srec.pbi UART.pbi
-build project4_part2.pbi : link system_MKL46Z4.pbi
+build project4_part0.pbi : link APP.pbi Flash.pbi gpio.pbi
+build project4_part1.pbi : link main.pbi QUEUE.pbi Srec.pbi
+build project4_part2.pbi : link UART.pbi system_MKL46Z4.pbi
 build project4.pbd : link project4_part0.pbi project4_part1.pbi project4_part2.pbi
 build project4.pbw : browsedata project4.pbd
 

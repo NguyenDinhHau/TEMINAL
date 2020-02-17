@@ -1,4 +1,4 @@
-app.pbi: D:\ARM\Assignment_4\source\APP.c \
+app.pbi: D:\ARM\TEMINAL\MockTest_2_update\source\APP.c \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdio.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\ycheck.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\yvals.h \
@@ -9,16 +9,18 @@ app.pbi: D:\ARM\Assignment_4\source\APP.c \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdint.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdlib.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\DLib_Product_stdlib.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdbool.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\string.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\DLib_Product_string.h \
-  D:\ARM\Assignment_4\MKL46Z\MKL46Z4.h \
-  D:\ARM\Assignment_4\CMSIS\Include\core_cm0plus.h \
-  D:\ARM\Assignment_4\CMSIS\Include/core_cmInstr.h \
+  D:\ARM\TEMINAL\MockTest_2_update\MKL46Z\MKL46Z4.h \
+  D:\ARM\TEMINAL\MockTest_2_update\CMSIS\Include\core_cm0plus.h \
+  D:\ARM\TEMINAL\MockTest_2_update\CMSIS\Include/core_cmInstr.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\cmsis_iar.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c/iccarm_builtin.h \
-  D:\ARM\Assignment_4\CMSIS\Include/core_cmFunc.h \
-  D:\ARM\Assignment_4\MKL46Z/system_MKL46Z4.h \
-  D:\ARM\Assignment_4\source/APP.h D:\ARM\Assignment_4\source/Flash.h \
-  D:\ARM\Assignment_4\source/UART.h D:\ARM\Assignment_4\source/QUEUE.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdbool.h \
-  D:\ARM\Assignment_4\source/Srec.h
+  D:\ARM\TEMINAL\MockTest_2_update\CMSIS\Include/core_cmFunc.h \
+  D:\ARM\TEMINAL\MockTest_2_update\MKL46Z/system_MKL46Z4.h \
+  D:\ARM\TEMINAL\MockTest_2_update\source/app.h \
+  D:\ARM\TEMINAL\MockTest_2_update\source/flash.h \
+  D:\ARM\TEMINAL\MockTest_2_update\source/uart.h \
+  D:\ARM\TEMINAL\MockTest_2_update\source/queue.h \
+  D:\ARM\TEMINAL\MockTest_2_update\source/parse.h

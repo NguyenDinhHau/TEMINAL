@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\settings\MOCK.Debug.general.xcl" --backend -f "C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\settings\MOCK.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "D:\ARM\TEMINAL\QuangPM4_Mocktest\project\settings\MOCK.Debug.general.xcl" --backend -f "D:\ARM\TEMINAL\QuangPM4_Mocktest\project\settings\MOCK.Debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\settings\MOCK.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\settings\MOCK.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "D:\ARM\TEMINAL\QuangPM4_Mocktest\project\settings\MOCK.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\ARM\TEMINAL\QuangPM4_Mocktest\project\settings\MOCK.Debug.driver.xcl" 
 }

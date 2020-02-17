@@ -149,7 +149,7 @@
                 <RecentlyUsedMenus>1</RecentlyUsedMenus>
                 <MenuShadows>1</MenuShadows>
                 <ShowAllMenusAfterDelay>1</ShowAllMenusAfterDelay>
-                <CommandsUsage>F30100000E001386000004000000108600000700000004810000020000000F810000010000000C81000007000000568600000F0000001F810000010000005E860000010000000E810000B20000000B8100004D00000002840000010000001186000002000000058100000200000046810000D4000000</CommandsUsage>
+                <CommandsUsage>00020000120013860000040000007884000001000000108600000A00000004810000020000000C840000010000000F810000010000000C81000007000000568600000F000000118400000100000033840000010000001F810000030000005E860000010000000E810000B20000000B8100004F00000002840000010000001186000002000000058100000200000046810000DA000000</CommandsUsage>
             </MFCToolBarParameters>
             <CommandManager>
                 <CommandsWithoutImages>0000</CommandsWithoutImages>
@@ -855,7 +855,7 @@
             <IarPane-34100>
                 <expressions>
                     <item>g_arr_buff[g_count++]</item>
-                    <item />
+                    <item></item>
                 </expressions>
                 <col-names>
                     <item>Expression</item>

@@ -345,9 +345,9 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>D:\ARM\Assignment_4\MKL46Z</state>
-                    <state>D:\ARM\Assignment_4\source</state>
-                    <state>D:\ARM\Assignment_4\CMSIS\Include</state>
+                    <state>D:\ARM\TEMINAL\MockTest_2_update\MKL46Z</state>
+                    <state>D:\ARM\TEMINAL\MockTest_2_update\CMSIS\Include</state>
+                    <state>D:\ARM\TEMINAL\MockTest_2_update\source</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2122,6 +2122,9 @@
             <name>$PROJ_DIR$\..\source\Flash.c</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\..\source\gpio.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\source\main.c</name>
         </file>
         <file>
@@ -2144,6 +2147,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\MKL46Z\fsl_device_registers.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\gpio.h</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\MKL46Z\MKL46Z4_features.h</name>

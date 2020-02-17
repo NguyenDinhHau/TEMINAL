@@ -1,30 +1,30 @@
-"C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\source\gpio.c"
+"D:\ARM\TEMINAL\QuangPM4_Mocktest\source\gpio.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -MD
 -MF
-C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\Debug\Obj\gpio.pbi.dep
+D:\ARM\TEMINAL\QuangPM4_Mocktest\project\Debug\Obj\gpio.pbi.dep
 -o
 gpio.pbi
 -I
-C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\source
+D:\ARM\TEMINAL\QuangPM4_Mocktest\source
 -I
-C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\CMSIS\Include
+D:\ARM\TEMINAL\QuangPM4_Mocktest\CMSIS\Include
 -I
-C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\MKL46Z
+D:\ARM\TEMINAL\QuangPM4_Mocktest\MKL46Z
 -I
-C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\source
+D:\ARM\TEMINAL\QuangPM4_Mocktest\source
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\inc\c
 -I
-C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\CMSIS\Include
+D:\ARM\TEMINAL\QuangPM4_Mocktest\CMSIS\Include
 -I
-C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\MKL46Z
+D:\ARM\TEMINAL\QuangPM4_Mocktest\MKL46Z
 -I
-C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\source
+D:\ARM\TEMINAL\QuangPM4_Mocktest\source
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
@@ -166,7 +166,7 @@ C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\source
 -D__JMP_BUF_NUM_ELEMENTS__=8
 -D__TID__=0xcf70
 -D__VER__=8042001
--D__BUILD_NUMBER__=236
+-D__BUILD_NUMBER__=233
 -D__IAR_SYSTEMS_ICC__=9
 -D_MAX_ALIGNMENT=8
 -D__LITTLE_ENDIAN__=1
@@ -234,8 +234,8 @@ C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\source
 -D__HAS_JOINED_TYPES__=1
 -D__HAS_LOCATED_DECLARATION__=1
 -D__HAS_LOCATED_WITH_INIT__=1
--D__IAR_COMPILERBASE__=656899
--D__IAR_COMPILERBASE_STR__=10.6.3.1217
+-D__IAR_COMPILERBASE__=656898
+-D__IAR_COMPILERBASE_STR__=10.6.2.1213
 -D__UNICODE_SOURCE_SUPPORTED__=1
 -D__VTABLE_MEM__=
 -D__PRAGMA_REDEFINE_EXTNAME=1
@@ -278,7 +278,7 @@ C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\source
 -DCPU_MKL46Z256VLL4=1
 -D_DLIB_CONFIG_FILE_HEADER_NAME="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.4\\arm\\inc\\c\\DLib_Config_Normal.h"
 -D_DLIB_CONFIG_FILE_STRING="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.4\\arm\\inc\\c\\DLib_Config_Normal.h"
--D__VERSION__="IAR ANSI C/C++ Compiler V8.42.1.236/W32 for ARM"
+-D__VERSION__="IAR ANSI C/C++ Compiler V8.42.1.233/W32 for ARM"
 -D_VA_DEFINED=
 -D_VA_LIST=struct __va_list
 -D__ICCARM_OLD_DEFINED_VAARGS__=1

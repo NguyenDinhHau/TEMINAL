@@ -66,7 +66,7 @@
                 </option>
                 <option>
                     <name>OGLastSavedByProductVersion</name>
-                    <state>8.42.2.24202</state>
+                    <state>8.42.1.23869</state>
                 </option>
                 <option>
                     <name>GeneralEnableMisra</name>
@@ -345,9 +345,9 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\CMSIS\Include</state>
-                    <state>C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\MKL46Z</state>
-                    <state>C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\source</state>
+                    <state>D:\ARM\TEMINAL\QuangPM4_Mocktest\CMSIS\Include</state>
+                    <state>D:\ARM\TEMINAL\QuangPM4_Mocktest\MKL46Z</state>
+                    <state>D:\ARM\TEMINAL\QuangPM4_Mocktest\source</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>

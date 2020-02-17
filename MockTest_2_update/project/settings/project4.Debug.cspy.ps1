@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "D:\ARM\Assignment_4\project\settings\project4.Debug.general.xcl" --backend -f "D:\ARM\Assignment_4\project\settings\project4.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "D:\ARM\TEMINAL\MockTest_2_update\project\settings\project4.Debug.general.xcl" --backend -f "D:\ARM\TEMINAL\MockTest_2_update\project\settings\project4.Debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "D:\ARM\Assignment_4\project\settings\project4.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\ARM\Assignment_4\project\settings\project4.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "D:\ARM\TEMINAL\MockTest_2_update\project\settings\project4.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\ARM\TEMINAL\MockTest_2_update\project\settings\project4.Debug.driver.xcl" 
 }

@@ -3,11 +3,5 @@
     <project>
         <path>$WS_DIR$\LED_PWM.ewp</path>
     </project>
-    <project>
-        <path>$WS_DIR$\..\..\LedBlinking\project\LedBlinking.ewp</path>
-    </project>
-    <project>
-        <path>$WS_DIR$\..\..\systick\project\systick1.ewp</path>
-    </project>
     <batchBuild />
 </workspace>

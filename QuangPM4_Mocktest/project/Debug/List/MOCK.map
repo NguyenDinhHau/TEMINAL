@@ -1,28 +1,27 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.42.1.236/W32 for ARM                  16/Feb/2020  14:29:03
+# IAR ELF Linker V8.42.1.233/W32 for ARM                  16/Feb/2020  14:44:04
 # Copyright 2007-2019 IAR Systems AB.
 #
 #    Output file  =
-#        C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\Debug\Exe\MOCK.out
+#        D:\ARM\TEMINAL\QuangPM4_Mocktest\project\Debug\Exe\MOCK.out
 #    Map file     =
-#        C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\Debug\List\MOCK.map
+#        D:\ARM\TEMINAL\QuangPM4_Mocktest\project\Debug\List\MOCK.map
 #    Command line =
-#        -f C:\Users\ADMIN\AppData\Local\Temp\EW2D93.tmp
-#        (C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\Debug\Obj\app.o
-#        C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\Debug\Obj\Flash.o
-#        C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\Debug\Obj\gpio.o
-#        C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\Debug\Obj\main.o
-#        C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\Debug\Obj\parse.o
-#        C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\Debug\Obj\queue.o
-#        C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\Debug\Obj\startup_MKL46Z4.o
-#        C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\Debug\Obj\system_MKL46Z4.o
-#        C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\Debug\Obj\uart0.o
+#        -f C:\Users\DELL\AppData\Local\Temp\EWBFE8.tmp
+#        (D:\ARM\TEMINAL\QuangPM4_Mocktest\project\Debug\Obj\app.o
+#        D:\ARM\TEMINAL\QuangPM4_Mocktest\project\Debug\Obj\Flash.o
+#        D:\ARM\TEMINAL\QuangPM4_Mocktest\project\Debug\Obj\gpio.o
+#        D:\ARM\TEMINAL\QuangPM4_Mocktest\project\Debug\Obj\main.o
+#        D:\ARM\TEMINAL\QuangPM4_Mocktest\project\Debug\Obj\parse.o
+#        D:\ARM\TEMINAL\QuangPM4_Mocktest\project\Debug\Obj\queue.o
+#        D:\ARM\TEMINAL\QuangPM4_Mocktest\project\Debug\Obj\startup_MKL46Z4.o
+#        D:\ARM\TEMINAL\QuangPM4_Mocktest\project\Debug\Obj\system_MKL46Z4.o
+#        D:\ARM\TEMINAL\QuangPM4_Mocktest\project\Debug\Obj\uart0.o
 #        --no_out_extension -o
-#        C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\Debug\Exe\MOCK.out
-#        --map
-#        C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\Debug\List\MOCK.map
-#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        D:\ARM\TEMINAL\QuangPM4_Mocktest\project\Debug\Exe\MOCK.out --map
+#        D:\ARM\TEMINAL\QuangPM4_Mocktest\project\Debug\List\MOCK.map --config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
 #        8.4\arm\config\linker\NXP\MKL46Z256xxx4.icf" --semihosting --entry
 #        __iar_program_start --vfe --text_out locale)
 #
@@ -178,7 +177,7 @@ command line/config:
     --------------------------------------------
     Total:
 
-C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\Debug\Obj: [1]
+D:\ARM\TEMINAL\QuangPM4_Mocktest\project\Debug\Obj: [1]
     Flash.o                224
     app.o                  196       56        4
     gpio.o                  56
@@ -306,7 +305,7 @@ readPtr                 0x1fff'e1d8    0x4  Data  Lc  uart0.o [1]
 strlen                         0xc1         Code  Gb  strlen.o [4]
 
 
-[1] = C:\Users\ADMIN\Dropbox\C\FPT\embedded\QuangPM4_Mocktest\project\Debug\Obj
+[1] = D:\ARM\TEMINAL\QuangPM4_Mocktest\project\Debug\Obj
 [2] = dl6M_tln.a
 [3] = m6M_tl.a
 [4] = rt6M_tl.a

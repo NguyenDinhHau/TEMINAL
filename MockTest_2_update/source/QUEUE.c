@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdbool.h>
 #include "MKL46Z4.h"
 #include "queue.h"
 
@@ -34,8 +35,8 @@ bool Queue_IsEmpty(void)
   
     return check;
 }
-/* allocate for autbuff mapping outbuff with g_queue*/
-void Queue_PushData(uint8_t ** outBuff)
+/* get free space for autbuff*/
+void Queue_GetFreeSpaceData(uint8_t ** outBuff)
 {
     if (!Queue_IsFull())
     {
@@ -47,7 +48,7 @@ void Queue_PushData(uint8_t ** outBuff)
     }
 }
 /*increate write and count when we add data from g_queue*/
-void Queue_Push_NextWrite(void)
+void Queue_Push(void)
 {
     if (!Queue_IsFull())/* Queue is not full */
     {
@@ -55,7 +56,7 @@ void Queue_Push_NextWrite(void)
         g_queue.count++;
     }
 }
-/* allocate for outbuff mapping outbuff with g_queue*/
+/* get data for outbuff*/
 void Queue_PopData(uint8_t ** outBuff)
 {
     if (!Queue_IsEmpty())
@@ -68,7 +69,7 @@ void Queue_PopData(uint8_t ** outBuff)
     }
 }
 /*increate increate and reduce count when we remove data from g_queue*/
-void Queue_Pop_NextRead(void)
+void Queue_Pop(void)
 {
     if (!Queue_IsEmpty())
     {

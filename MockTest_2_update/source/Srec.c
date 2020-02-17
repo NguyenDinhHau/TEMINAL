@@ -1,7 +1,10 @@
 #include<stdio.h>
-#include<string.h>
 #include<stdint.h>
-#include "Srec.h"
+#include<string.h>
+#include<stdbool.h>
+#include "parse.h"
+
+static uint16_t s_error = 0;
 
 static uint8_t ConvertToHex(uint8_t data)
 {
@@ -11,12 +14,13 @@ static uint8_t ConvertToHex(uint8_t data)
     {
         temp = (data - '0');
     }
+    else  if(data >= 'A' && data <= 'F')
+    {
+         temp = (data - 'A' + 10u);
+    }
     else
     {
-        if(data >= 'A' && data <= 'F')
-        {
-            temp = (data - 'A' + 10u);
-        }
+        s_error++;
     }
 
     return temp;
@@ -32,12 +36,12 @@ static uint8_t ConvertToByte(uint8_t *data)
     return temp;
 }
 
-uint8_t Srec_Parse(uint8_t *data, addData_str_t *copyData)
+srec_parser_status_enum_t Srec_Parse(uint8_t *data, addData_str_t *outPut_Data)
 {
     uint32_t checkSum = 0;
     uint8_t byteCount = 0;
     uint8_t addlength = 0;
-    uint8_t status = 0;
+    srec_parser_status_enum_t status;
     uint8_t type = -1;
     uint8_t index = 0;
     uint8_t index_data = 0;
@@ -49,7 +53,7 @@ uint8_t Srec_Parse(uint8_t *data, addData_str_t *copyData)
     }
     else
     {
-         status = ERROR_FIRST_CHARACTER;
+         status = ERROR_UNKNOWN;
     }
       switch (type)
       {
@@ -79,24 +83,24 @@ uint8_t Srec_Parse(uint8_t *data, addData_str_t *copyData)
       }
       checkSum = 0;
       index_data = 0;
-      copyData->add = 0;
-      copyData->dataLengh = 0;
+      outPut_Data->add = 0;
+      outPut_Data->dataLengh = 0;
       byteCount   = (ConvertToByte(&data[2]));
       checkSum    += byteCount;
-      copyData->dataLengh = byteCount - (addlength/2) - 1u;
+      outPut_Data->dataLengh = byteCount - (addlength/2) - 1u;
       for(index = 4; index <= strlen((char *)data)-4; index+=2)
       {
        if(index < (addlength + 4))
        {
-           copyData->add <<=8u;
+           outPut_Data->add <<=8u;
            temp = ConvertToByte(&data[index]);
-           copyData->add |= temp;
+           outPut_Data->add |= temp;
            checkSum += temp;
        }
        else if(index >= (addlength + 4))
        {
            temp = ConvertToByte(&data[index]);
-           copyData->data[index_data] = temp;
+           outPut_Data->data[index_data] = temp;
            checkSum    += temp;
            index_data ++;
        }
@@ -106,6 +110,10 @@ uint8_t Srec_Parse(uint8_t *data, addData_str_t *copyData)
       if(0xFF != (uint8_t)checkSum)
       {
           status = ERROR_CHECKSUM;
+      }
+      else if(s_error != 0)
+      {
+        status = ERROR_UNKNOWN;
       }
 
     return status;

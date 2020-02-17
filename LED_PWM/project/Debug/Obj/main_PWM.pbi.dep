@@ -1,2 +1,1 @@
-main_PWM.pbi: \
-  C:\Users\ADMIN\Dropbox\C\FPT\embedded\LED_PWM\source\main_PWM.c
+main_PWM.pbi: D:\ARM\TEMINAL\LED_PWM\source\main_PWM.c
