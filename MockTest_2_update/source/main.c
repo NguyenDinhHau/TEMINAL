@@ -11,10 +11,10 @@ int main(void)
     SW_Init();
     if((GPIOC->PDIR &(1<<3)) == 0)
     {
-       Boot();
+        Boot();
     }
     else
     {
-      App();
+        App();
     }
 }

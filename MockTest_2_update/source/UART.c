@@ -6,7 +6,7 @@
 #include "uart.h"
 #include "queue.h"
 
-static uint8_t s_buff;
+static uint8_t s_data;
 static uint8_t *s_arr_buff_ptr;
 static uint32_t s_count = 0;
 
@@ -71,23 +71,23 @@ void UART0_EnableInterrupt(void)
 void UART0_IRQHandler(void)
 {
 
-    s_buff = UART0_GetChar(); /* Save data */
+    s_data = UART0_GetChar(); /* Save data */
     if(s_arr_buff_ptr == NULL)
-     {
-        Queue_GetFreeSpaceData(&s_arr_buff_ptr);
-     }
-    if ('\0' != s_buff) /* Check ACII character */
     {
-      if('\n' != s_buff) /* Move to the next queue */
-      {
-          s_arr_buff_ptr[s_count++] = s_buff;
-      }
-      else
-      {
-        s_arr_buff_ptr[s_count++] = '\0';
-          s_count = 0;
-          Queue_Push();
-          Queue_GetFreeSpaceData(&s_arr_buff_ptr); /* add new queue */
-      }
+        Queue_GetFreeSpaceData(&s_arr_buff_ptr);
+    }
+    if('\0' != s_data) /* Check ACII character */
+    {
+        if('\n' != s_data) /* Move to the next queue */
+        {
+            s_arr_buff_ptr[s_count++] = s_data;
+        }
+        else
+        {
+            s_arr_buff_ptr[s_count++] = '\0';
+            s_count = 0;
+            Queue_Push();
+            Queue_GetFreeSpaceData(&s_arr_buff_ptr); /* add new queue */
+        }
     }
 }

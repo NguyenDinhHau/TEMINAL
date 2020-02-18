@@ -6,7 +6,7 @@
 static queue_str_t g_queue;
 
 void Queue_Init(void)
-{ 
+{
     g_queue.read = 0;
     g_queue.write = 0;
     g_queue.count = 0;
@@ -14,37 +14,37 @@ void Queue_Init(void)
 
 bool Queue_IsFull(void)
 {
-  bool check = false;
-  
-  if(QUEUE_SIZE == g_queue.count)
-  {
-    check = true;
-  }
-  
+    bool check = false;
+
+    if(QUEUE_SIZE == g_queue.count)
+    {
+        check = true;
+    }
+
     return check;
 }
 
 bool Queue_IsEmpty(void)
 {
-  bool check = false;
+    bool check = false;
   
-  if(0 == g_queue.count)
-  {
-    check = true;
-  }
-  
+    if(0 == g_queue.count)
+    {
+        check = true;
+    }
+
     return check;
 }
 /* get free space for autbuff*/
 void Queue_GetFreeSpaceData(uint8_t ** outBuff)
 {
-    if (!Queue_IsFull())
+    if(!Queue_IsFull())
     {
         *outBuff = g_queue.a[g_queue.write % QUEUE_SIZE].data;
     }
     else
     {
-      *outBuff = NULL;
+        *outBuff = NULL;
     }
 }
 /*increate write and count when we add data from g_queue*/

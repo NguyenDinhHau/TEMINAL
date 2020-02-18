@@ -6,7 +6,7 @@
 
 static uint16_t s_error = 0;
 
-static uint8_t ConvertToHex(uint8_t data)
+static uint8_t Srec_ConvertCharToHex(uint8_t data)
 {
     uint8_t temp = 0;
 
@@ -26,12 +26,12 @@ static uint8_t ConvertToHex(uint8_t data)
     return temp;
 }
 
-static uint8_t ConvertToByte(uint8_t *data)
+static uint8_t Srec_ConvertTwoCharToByte(uint8_t *data)
 {
     uint8_t temp = 0;
 
-    temp  = (ConvertToHex(*data)<<4u);
-    temp |= (ConvertToHex(*(data+1)));
+    temp  = (Srec_ConvertCharToHex(*data)<<4u);
+    temp |= (Srec_ConvertCharToHex(*(data+1)));
 
     return temp;
 }
@@ -49,16 +49,16 @@ srec_parser_status_enum_t Srec_Parse(uint8_t *data, addData_str_t *outPut_Data)
 
     if(data[0] == 'S')
     {
-         type = ConvertToHex(data[1]);
+        type = Srec_ConvertCharToHex(data[1]);
     }
     else
     {
-         status = ERROR_UNKNOWN;
+        status = ERROR_UNKNOWN;
     }
-      switch (type)
-      {
-          case 0:
-              addlength   = 2u;
+    switch (type)
+    {
+        case 0:
+            addlength   = 2u;
               status      = START;
               break;
           case 1:
@@ -85,7 +85,7 @@ srec_parser_status_enum_t Srec_Parse(uint8_t *data, addData_str_t *outPut_Data)
       index_data = 0;
       outPut_Data->add = 0;
       outPut_Data->dataLengh = 0;
-      byteCount   = (ConvertToByte(&data[2]));
+      byteCount   = (Srec_ConvertTwoCharToByte(&data[2]));
       checkSum    += byteCount;
       outPut_Data->dataLengh = byteCount - (addlength/2) - 1u;
       for(index = 4; index <= strlen((char *)data)-4; index+=2)
@@ -93,19 +93,19 @@ srec_parser_status_enum_t Srec_Parse(uint8_t *data, addData_str_t *outPut_Data)
        if(index < (addlength + 4))
        {
            outPut_Data->add <<=8u;
-           temp = ConvertToByte(&data[index]);
+           temp = Srec_ConvertTwoCharToByte(&data[index]);
            outPut_Data->add |= temp;
            checkSum += temp;
        }
        else if(index >= (addlength + 4))
        {
-           temp = ConvertToByte(&data[index]);
+           temp = Srec_ConvertTwoCharToByte(&data[index]);
            outPut_Data->data[index_data] = temp;
            checkSum    += temp;
            index_data ++;
        }
       }
-      checkSum += ConvertToByte(&data[strlen((char *)data)-3]);
+      checkSum += Srec_ConvertTwoCharToByte(&data[strlen((char *)data)-3]);
 
       if(0xFF != (uint8_t)checkSum)
       {

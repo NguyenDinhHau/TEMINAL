@@ -2374,10 +2374,10 @@
     <group>
         <name>source</name>
         <file>
-            <name>$PROJ_DIR$\..\source\APP.c</name>
+            <name>$PROJ_DIR$\..\source\app.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\source\Flash.c</name>
+            <name>$PROJ_DIR$\..\source\flash.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\source\gpio.c</name>
@@ -2386,22 +2386,22 @@
             <name>$PROJ_DIR$\..\source\main.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\source\QUEUE.c</name>
+            <name>$PROJ_DIR$\..\source\queue.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\source\Srec.c</name>
+            <name>$PROJ_DIR$\..\source\srec.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\source\UART.c</name>
+            <name>$PROJ_DIR$\..\source\uart.c</name>
         </file>
     </group>
     <group>
         <name>starup</name>
         <file>
-            <name>$PROJ_DIR$\..\source\APP.h</name>
+            <name>$PROJ_DIR$\..\source\app.h</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\source\Flash.h</name>
+            <name>$PROJ_DIR$\..\source\flash.h</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\MKL46Z\fsl_device_registers.h</name>
@@ -2413,13 +2413,13 @@
             <name>$PROJ_DIR$\..\MKL46Z\MKL46Z4_features.h</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\..\source\parse.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\source\parse_src.h</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\source\QUEUE.h</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\source\Srec.h</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\MKL46Z\startup_MKL46Z4.s</name>
@@ -2431,7 +2431,7 @@
             <name>$PROJ_DIR$\..\MKL46Z\system_MKL46Z4.h</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\source\UART.h</name>
+            <name>$PROJ_DIR$\..\source\uart.h</name>
         </file>
     </group>
 </project>

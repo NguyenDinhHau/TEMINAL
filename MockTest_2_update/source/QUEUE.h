@@ -7,7 +7,7 @@
 typedef struct
 {
     uint8_t data[DATA_SIZE];
-} queue_element_str_t;
+}queue_element_str_t;
 
 typedef struct
 {

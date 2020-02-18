@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.42.1.233/W32 for ARM                  18/Feb/2020  05:53:46
+# IAR ELF Linker V8.42.1.233/W32 for ARM                  18/Feb/2020  09:02:09
 # Copyright 2007-2019 IAR Systems AB.
 #
 #    Output file  =
@@ -8,9 +8,9 @@
 #    Map file     =
 #        D:\ARM\TEMINAL\MockTest_2_update\project\Debug\List\project4.map
 #    Command line =
-#        -f C:\Users\DELL\AppData\Local\Temp\EWFD33.tmp
+#        -f C:\Users\DELL\AppData\Local\Temp\EW758B.tmp
 #        (D:\ARM\TEMINAL\MockTest_2_update\project\Debug\Obj\APP.o
-#        D:\ARM\TEMINAL\MockTest_2_update\project\Debug\Obj\flash.o
+#        D:\ARM\TEMINAL\MockTest_2_update\project\Debug\Obj\Flash.o
 #        D:\ARM\TEMINAL\MockTest_2_update\project\Debug\Obj\gpio.o
 #        D:\ARM\TEMINAL\MockTest_2_update\project\Debug\Obj\main.o
 #        D:\ARM\TEMINAL\MockTest_2_update\project\Debug\Obj\QUEUE.o
@@ -91,7 +91,7 @@ No sections matched the following patterns:
   .text              ro code        0x740    0xb8  QUEUE.o [1]
   .text              ro code        0x7f8   0x118  APP.o [1]
   .text              ro code        0x910    0x4c  no_free_heap0.o [2]
-  .text              ro code        0x95c    0xe0  flash.o [1]
+  .text              ro code        0x95c    0xe0  Flash.o [1]
   .text              ro code        0xa3c    0x2c  xgetmemchunk.o [2]
   .text              ro code        0xa68    0xac  gpio.o [1]
   .rodata            const          0xb14    0x50  APP.o [1]
@@ -196,10 +196,10 @@ command line/config:
 
 D:\ARM\TEMINAL\MockTest_2_update\project\Debug\Obj: [1]
     APP.o                  280      253        5
+    Flash.o                224
     QUEUE.o                184             1'024
     Srec.o                 436                 2
     UART.o                 380                 9
-    flash.o                224
     gpio.o                 172
     main.o                  36
     startup_MKL46Z4.o      350
@@ -248,18 +248,16 @@ Entry                       Address   Size  Type      Object
 .iar.init_table$$Limit        0xcd8          --   Gb  - Linker created -
 ?main                         0xcd9         Code  Gb  cmain.o [3]
 App                           0x7f9   0x22  Code  Gb  APP.o [1]
-Boot                          0x81b   0xcc  Code  Gb  APP.o [1]
+Boot                          0x81b   0xce  Code  Gb  APP.o [1]
 CSTACK$$Base            0x1fff'e420          --   Gb  - Linker created -
 CSTACK$$Limit           0x1fff'ec20          --   Gb  - Linker created -
-ConvertToByte                 0x445   0x1a  Code  Lc  Srec.o [1]
-ConvertToHex                  0x411   0x34  Code  Lc  Srec.o [1]
-Erase_Multi_Sector            0xa11   0x2c  Code  Gb  flash.o [1]
-Erase_Sector                  0x9af   0x3a  Code  Gb  flash.o [1]
+Erase_Multi_Sector            0xa11   0x2c  Code  Gb  Flash.o [1]
+Erase_Sector                  0x9af   0x3a  Code  Gb  Flash.o [1]
 HEAP$$Base              0x1fff'ec20          --   Gb  - Linker created -
 HEAP$$Limit             0x1fff'fc20          --   Gb  - Linker created -
 LED_Init                      0xa69   0x52  Code  Gb  gpio.o [1]
 NVIC_EnableIRQ                0x5c5    0xe  Code  Lc  UART.o [1]
-Program_LongWord_8B           0x95d   0x52  Code  Gb  flash.o [1]
+Program_LongWord_8B           0x95d   0x52  Code  Gb  Flash.o [1]
 Queue_GetFreeSpaceData        0x771   0x28  Code  Gb  QUEUE.o [1]
 Queue_Init                    0x741    0xc  Code  Gb  QUEUE.o [1]
 Queue_IsEmpty                 0x75f   0x12  Code  Gb  QUEUE.o [1]
@@ -270,6 +268,9 @@ Queue_Push                    0x799   0x1a  Code  Gb  QUEUE.o [1]
 Region$$Table$$Base           0xcb4          --   Gb  - Linker created -
 Region$$Table$$Limit          0xcd8          --   Gb  - Linker created -
 SW_Init                       0xabb   0x34  Code  Gb  gpio.o [1]
+Srec_ConvertCharToHex         0x411   0x34  Code  Lc  Srec.o [1]
+Srec_ConvertTwoCharToByte
+                              0x445   0x1a  Code  Lc  Srec.o [1]
 Srec_Parse                    0x45f  0x160  Code  Gb  Srec.o [1]
 SystemInit                    0xd5d    0x8  Code  Gb  system_MKL46Z4.o [1]
 UART0_EnableInterrupt         0x685   0x1c  Code  Gb  UART.o [1]
@@ -309,8 +310,8 @@ g_queue                 0x1fff'e004  0x400  Data  Lc  QUEUE.o [1]
 main                          0xc6d   0x24  Code  Gb  main.o [1]
 qs                      0x1fff'e410    0x4  Data  Lc  no_free_heap0.o [2]
 s_arr_buff_ptr          0x1fff'e408    0x4  Data  Lc  UART.o [1]
-s_buff                  0x1fff'e41a    0x1  Data  Lc  UART.o [1]
 s_count                 0x1fff'e40c    0x4  Data  Lc  UART.o [1]
+s_data                  0x1fff'e41a    0x1  Data  Lc  UART.o [1]
 s_error                 0x1fff'e418    0x2  Data  Lc  Srec.o [1]
 strlen                        0x1a1         Code  Gb  strlen.o [3]
 

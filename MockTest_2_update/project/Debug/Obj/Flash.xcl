@@ -1,4 +1,4 @@
-"D:\ARM\TEMINAL\MockTest_2_update\source\Flash.c"
+"D:\ARM\TEMINAL\MockTest_2_update\source\flash.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512

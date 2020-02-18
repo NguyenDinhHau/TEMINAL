@@ -26,14 +26,13 @@ void LED_Init(void)
 /******************************************************************************/
 void SW_Init(void)
 {
-  /* Enable clock gate for PORTC */
-  SIM->SCGC5 |= (1 << 11);
+    /* Enable clock gate for PORTC */
+    SIM->SCGC5 |= (1 << 11);
 
-  /* Configure of PTC3 as GPIO*/
-  PORTC->PCR[3] |= PORT_PCR_MUX(1);
-  PORTC->PCR[3] |= PORT_PCR_PE(1);
-  PORTC->PCR[3] |= PORT_PCR_PS(1);
-  /* Configure PTC3 as Input */
-  GPIOC->PDDR &= ~(1 << 3);
-
+    /* Configure of PTC3 as GPIO*/
+    PORTC->PCR[3] |= PORT_PCR_MUX(1);
+    PORTC->PCR[3] |= PORT_PCR_PE(1);
+    PORTC->PCR[3] |= PORT_PCR_PS(1);
+    /* Configure PTC3 as Input */
+    GPIOC->PDDR &= ~(1 << 3);
 }
