@@ -54,25 +54,25 @@ void Boot(void)
                     __enable_irq();
                 }
             }
-        }
-        else
-        {
-            if(END_DATA == status)
+            else
             {
-                UART0_SendString("Done! Press reset button to run app \r\n");
-                g_isCheck = 0;
+                if(END_DATA == status)
+                {
+                    UART0_SendString("Done! Press reset button to run app \r\n");
+                    g_isCheck = 0;
+                }
+                if(ERROR_UNKNOWN == status)
+                {
+                    UART0_SendString("ERROR FIRST CHARACTER! hold your Button and Press reset button to Boot Again \r\n");
+                    g_isCheck = 0;
+                }
+                if(ERROR_CHECKSUM == status)
+                {
+                    UART0_SendString("ERROR CHECKSUM! hold your Button and Press reset button to Boot Again \r\n");
+                    g_isCheck = 0;
+                }
             }
-            if(ERROR_UNKNOWN == status)
-            {
-                UART0_SendString("ERROR FIRST CHARACTER! hold your Button and Press reset button to Boot Again \r\n");
-                g_isCheck = 0;
-            }
-            if(ERROR_CHECKSUM == status)
-            {
-                UART0_SendString("ERROR CHECKSUM! hold your Button and Press reset button to Boot Again \r\n");
-                g_isCheck = 0;
-            }
-        }
         Queue_Pop();
+        }
     }
 }
