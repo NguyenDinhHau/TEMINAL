@@ -1,6 +1,8 @@
 #ifndef _PARSE_H
 #define _PARSE_H
-
+/*******************************************************************************
+ * API
+ ******************************************************************************/
 typedef struct {
     uint32_t add;
     uint8_t data[255];
@@ -17,6 +19,6 @@ typedef enum
     DATA_LINE_COUNT
 } srec_parser_status_enum_t;
 
-srec_parser_status_enum_t Srec_Parse(uint8_t *data, addData_str_t *outPut_Data);
+srec_parser_status_enum_t Srec_Parse(uint8_t *data, addData_str_t *outPutData);
 
 #endif

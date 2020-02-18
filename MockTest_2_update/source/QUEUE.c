@@ -1,17 +1,22 @@
+/*******************************************************************************
+ * Includes
+ ******************************************************************************/
 #include<stdio.h>
 #include<stdbool.h>
 #include "MKL46Z4.h"
 #include "queue.h"
-
+/*******************************************************************************
+ * Codes
+ ******************************************************************************/
 static queue_str_t g_queue;
-
+/* inital for queue */
 void Queue_Init(void)
 {
     g_queue.read = 0;
     g_queue.write = 0;
     g_queue.count = 0;
 }
-
+/* check queue full */
 bool Queue_IsFull(void)
 {
     bool check = false;
@@ -23,7 +28,7 @@ bool Queue_IsFull(void)
 
     return check;
 }
-
+/* check queue empty */
 bool Queue_IsEmpty(void)
 {
     bool check = false;

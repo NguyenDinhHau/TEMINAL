@@ -1,3 +1,6 @@
+/*******************************************************************************
+ * Includes
+ ******************************************************************************/
 #include<stdlib.h>
 #include<string.h>
 #include<stdbool.h>
@@ -5,7 +8,9 @@
 #include "MKL46Z4.h"
 #include "uart.h"
 #include "queue.h"
-
+/*******************************************************************************
+ * Codes
+ ******************************************************************************/
 static uint8_t s_data;
 static uint8_t *s_arr_buff_ptr;
 static uint32_t s_count = 0;
@@ -37,6 +42,7 @@ void UART0_Init(void)
     UART0->C2 |= (UART0_C2_TE_MASK | UART0_C2_RE_MASK );
 
 }
+/* Send a char to PC */
 void UART0_SendChar(char data)
 {
     while(!(UART0->S1 & (1 << 7) ))
@@ -44,6 +50,7 @@ void UART0_SendChar(char data)
     }
     UART0->D = data;
 }
+/* Send a String to PC */
 void UART0_SendString(char *ptr_str)
 {
     while(*ptr_str != 0)
@@ -51,7 +58,7 @@ void UART0_SendString(char *ptr_str)
         UART0_SendChar(*ptr_str ++);
     }
 }
-
+/* Send a char from PC */
 uint8_t UART0_GetChar(void)
 {
     /* Wait until character has been received */
@@ -59,6 +66,7 @@ uint8_t UART0_GetChar(void)
     /* Return the 8-bit data from the receiver */
     return UART0->D;
 }
+/*this function to Enable Interrupt UART0*/
 void UART0_EnableInterrupt(void)
 {
     /* Enable interrupt for receiver */
@@ -67,18 +75,19 @@ void UART0_EnableInterrupt(void)
     /* Enable interrupt UART0*/
     NVIC_EnableIRQ(UART0_IRQn);
 }
-
+/* this is INTERRUPT Function of UART */
 void UART0_IRQHandler(void)
 {
 
     s_data = UART0_GetChar(); /* Save data */
     if(s_arr_buff_ptr == NULL)
     {
+        /* Get free space data for s_arr_buff_ptr*/
         Queue_GetFreeSpaceData(&s_arr_buff_ptr);
     }
     if('\0' != s_data) /* Check ACII character */
     {
-        if('\n' != s_data) /* Move to the next queue */
+        if('\n' != s_data)
         {
             s_arr_buff_ptr[s_count++] = s_data;
         }
@@ -87,7 +96,8 @@ void UART0_IRQHandler(void)
             s_arr_buff_ptr[s_count++] = '\0';
             s_count = 0;
             Queue_Push();
-            Queue_GetFreeSpaceData(&s_arr_buff_ptr); /* add new queue */
+            /* add new queue */
+            Queue_GetFreeSpaceData(&s_arr_buff_ptr); 
         }
     }
 }

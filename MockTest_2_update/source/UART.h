@@ -1,6 +1,8 @@
 #ifndef _UART_H_
 #define _UART_H_
-
+/*******************************************************************************
+ * API
+ ******************************************************************************/
 void UART0_Init(void);                     /*Configure for UART0*/
 void UART0_EnableInterrupt(void);          /*Enable UART0_INTERRUPT*/
 void UART0_SendChar(char data);            /*Send a char from UART*/

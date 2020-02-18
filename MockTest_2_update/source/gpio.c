@@ -1,10 +1,16 @@
+/*******************************************************************************
+ * Includes
+ ******************************************************************************/
 #include<stdio.h>
 #include<stdint.h>
 #include<stdlib.h>
 #include<string.h>
 #include "MKL46Z4.h"
 #include "gpio.h"
-
+/*******************************************************************************
+ * Codes
+ ******************************************************************************/
+/*Turn off Red led and Green led*/
 void LED_Init(void)
 {
     /* Enable clock gate for PORTD, PORTE */
@@ -23,7 +29,7 @@ void LED_Init(void)
     RED_LED_OFF;
     GREEN_LED_OFF;
 }
-/******************************************************************************/
+/* Configure for Switch */
 void SW_Init(void)
 {
     /* Enable clock gate for PORTC */
