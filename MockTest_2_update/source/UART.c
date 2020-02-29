@@ -21,15 +21,15 @@ void UART0_Init(void)
     SIM->SCGC5 |= SIM_SCGC5_PORTA_MASK;
     /* Enable clock gate UART */
     SIM->SCGC4 |= SIM_SCGC4_UART0_MASK;
-     /* config PTDA 1, 2 as TX, RX*/
+    /* config PTDA 1, 2 as TX, RX*/
     PORTA->PCR[1] |= PORT_PCR_MUX(2); /* UART0_RX */
     PORTA->PCR[2] |= PORT_PCR_MUX(2); /* UART0_TX */
-    
+
     UART0->C2 &= ~(UART0_C2_TE_MASK | UART0_C2_RE_MASK);
     /*Select clock 4Mhz */
     SIM->SOPT2 |= SIM_SOPT2_UART0SRC(3);
     /* Divide Factor is 1 */
-     MCG->SC &= ~ (7 << 1);
+    MCG->SC &= ~ (7 << 1);
 
     MCG->C1 |= MCG_C1_IRCLKEN(1);
     MCG->C2 |= MCG_C2_IRCS(1);
@@ -39,7 +39,7 @@ void UART0_Init(void)
     UART0->C4 = 4;/* set OSR */
     UART0->BDL = 7;/* set SBR */
     UART0->BDH = 0x00;
-    UART0->C2 |= (UART0_C2_TE_MASK | UART0_C2_RE_MASK );
+    UART0->C2 |= (UART0_C2_TE_MASK | UART0_C2_RE_MASK ); 
 
 }
 /* Send a char to PC */
@@ -61,7 +61,7 @@ void UART0_SendString(char *ptr_str)
 /* Send a char from PC */
 uint8_t UART0_GetChar(void)
 {
-    /* Wait until character has been received */
+    /* Wait until character has been received    */
     while (!(UART0->S1 &  (1 << 5)));
     /* Return the 8-bit data from the receiver */
     return UART0->D;

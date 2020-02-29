@@ -22,7 +22,7 @@ static uint8_t g_isCheck = 1;
 void App(void)
 {
     /*Hold vector table offset*/
-    SCB->VTOR = APP_ISP_ADDRESS;  
+    SCB->VTOR = APP_ISP_ADDRESS;
     __set_MSP(*(volatile uint32_t *)APP_ISP_ADDRESS);
     /*get adddress of reset handle of app*/
     g_func_reset = (ptr_funtion)*(volatile int *)APP_HANDLE_ADDRESS; 

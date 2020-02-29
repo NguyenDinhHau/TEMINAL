@@ -1,4 +1,4 @@
-UART.pbi: D:\ARM\TEMINAL\MockTest_2_update\source\UART.c \
+UART.pbi: D:\ARM\TEMINAL\MockTest_2_update\source\uart.c \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdlib.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\ycheck.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\yvals.h \

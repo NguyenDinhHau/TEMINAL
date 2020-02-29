@@ -1,4 +1,4 @@
-QUEUE.pbi: D:\ARM\TEMINAL\MockTest_2_update\source\QUEUE.c \
+QUEUE.pbi: D:\ARM\TEMINAL\MockTest_2_update\source\queue.c \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdio.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\ycheck.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\yvals.h \

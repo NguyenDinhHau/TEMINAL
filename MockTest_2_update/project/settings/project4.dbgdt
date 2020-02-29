@@ -857,7 +857,7 @@
             <IarPane-34100>
                 <expressions>
                     <item>g_arr_buff[g_count++]</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>
